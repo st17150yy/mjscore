@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <html lang="ja">
+    <head>
+      <meta charset="utf-8" />
+      <title>名前登録</title>
+    </head>
+    <body>
+      <form method="get" action="{{ url_for('input') }}" >
+        <label >名前登録</label>
+        <div>
+          <label><input type="radio" name="house" value=0 required>東家</label>
+          <label><input type="radio" name="house" value=1>南家</label>
+          <label><input type="radio" name="house" value=2>西家</label>
+          <label><input type="radio" name="house" value=3>北家</label>
+
+        </div>
+        <div>
+          <label for="name">名前</label>
+          <input name="name" value="" required>
+        </div>
+        <div>
+          <button type="submit">登録</button>
+        </div>
+      </form>
+    </body>
+  </html>

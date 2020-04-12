@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  <html lang="ja">
+    <head>
+      <meta charset="utf-8" />
+      <title>点数入力</title>
+
+
+    </head>
+    <body>
+      <form method="get" action="{{ url_for('send') }}">
+        <b>状態、点数入力</b>
+        <div>
+          <input type="text" name="house"  value={{house}} readonly>
+          <p2>プレイヤー：{{name}}<input type="hidden" name="name"  value={{name}} readonly></p2>
+
+        </div>
+<!-- 立直 -->
+        <div>
+          <label>立直した　<input type="radio" name="reach" value=1 >Yes　</label>
+          <label><input type="radio" name="reach" value=0 checked>No　</label>
+        </div>
+<!-- 流局 -->
+        <div>
+          <label><input type="radio" name="agari" value=-5 required>流局の場合：
+          <input type="radio" name="ryukyoku" value=1>テンパイ　</label>
+          <label><input type="radio" name="ryukyoku" value=-1>ノーテン　</label>
+        </div>
+<!-- 和了 -->
+        <div>
+          <label><input type="radio" name="ryukyoku" value=-5 required>和了の場合：</label>
+          <label><input type="radio" name="agari" value=1>アガリ</label>
+          <label><input type="radio" name="agari" value=0>アガらなかった</label>
+          <label><input type="radio" name="agari" value=-1>放銃</label>
+        </div>
+
+        <div>
+          <label for="score">点数(供託、積み棒除く)</label>
+          <input name="score" id="score" value="0">
+        </div>
+
+
+
+        <div>
+          <button type="submit">点数反映</button>
+        </div>
+      </form>
+    </body>
+  </html>

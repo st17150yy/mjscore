@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html lang="ja">
+    <head>
+      <meta charset="utf-8" />
+      <title>点数表示</title>
+    </head>
+    <body>
+
+
+      <form method="get" action="{{ url_for('input')}}">
+
+        <input type="hidden" name="house"  value={{house}} >
+
+        <div>
+          <p2>プレイヤー：{{name}},{{house_wind}}家<input type="hidden" name="name"  value={{name}} readonly></p2>
+
+        </div>
+        <p>{{kyoku}}局{{honba}}本場</p>
+        <p2>SCORE</p2>
+        <p>東：{{p0}}</p>
+        <p>南：{{p1}}</p>
+        <p>西：{{p2}}</p>
+        <p>北：{{p3}}</p>
+
+        <input type="submit" name="test" value="次の局">
+
+      </form>
+      <form method="get" action="{{ url_for('reload')}}">
+        <input type="submit" name="t" value="再読み込み">
+        <input type="hidden" name="house"  value={{house}} >
+
+      </form>
+      <form method="get" action="{{ url_for('chose')}}">
+        <input type="submit" name="test" value="最初から">
+
+      </form>
+    </body>
+  </html>

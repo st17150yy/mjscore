@@ -1,0 +1,28 @@
+{
+  "player_list": [
+    "aaa",
+    "",
+    "",
+    ""
+  ],
+  "score_list": [
+    [
+      25000,
+      25000,
+      25000,
+      25000
+    ]
+  ],
+  "config": {
+    "oya": 0,
+    "kaze": 0,
+    "honba": 0,
+    "kyotaku": 0
+  },
+  "prev_config": {
+    "oya": 0,
+    "kaze": 0,
+    "honba": 0,
+    "kyotaku": 0
+  }
+}
